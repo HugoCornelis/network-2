@@ -1,0 +1,97 @@
+#!/bin/sh
+
+##
+## $Id: TUTORIAL 1.6.1.4 Mon, 19 Mar 2001 04:16:01 -0600 hugo $
+##
+
+##############################################################################
+##'
+##' Cerebellar cortex tutorial
+##'
+##' (C) 1998,1999 BBF-UIA
+##'
+##' see our site at http://www.bbf.uia.ac.be/ for more information regarding
+##' the cerebellar cortex and genesis simulation software.
+##'
+##'
+##' functional ideas ..	Reinoud Maex, reinoud@bbf.uia.ac.be
+##'			Erik De Schutter, erik@bbf.uia.ac.be
+##' genesis coding ....	Hugo Cornelis, hugo@bbf.uia.ac.be
+##'
+##' general feedback ..	Reinoud Maex, Erik De Schutter
+##'
+##############################################################################
+
+
+# TUTORIAL : shell script to give transparant initialization and configuration
+
+
+# if simulation status file exists
+
+if [ -f simulation.status ]; then
+
+    # remove simulation status file
+
+    rm simulation.status
+fi
+
+# if config does not exist
+
+if [ ! -f cerebellar.config ]; then
+
+    # make config
+
+    ~/genesis/source/uname/Linux/snapshots/san-antonio-1/genesis makeconfig.g
+fi
+
+# if complete restart requested 
+
+if [ "$1" = "restart" ]; then
+
+    # copy default configuration to current
+
+    cp simulation.defaults simulation.config
+fi
+
+# while we should simulate the network
+
+SIMULATE=1
+
+while [ "$SIMULATE" = "1" ]
+do
+    # remove any previous simulation status
+
+    rm 2>/dev/null simulation.status
+
+    # start the tutorial
+
+    ~/genesis/source/uname/Linux/snapshots/san-antonio-1/genesis TUTORIAL.g
+
+    # if genesis terminated normally
+
+    if [ -f simulation.status ]; then
+
+	# check if we should restart simulation
+
+	SIMULATE=`cat simulation.status`
+
+    # else
+
+    else
+
+	# end simulation
+
+	SIMULATE=0
+    fi
+done
+
+# if simulation status file exists
+
+if [ -f simulation.status ]; then
+
+    # remove simulation status file
+
+    rm simulation.status
+fi
+
+

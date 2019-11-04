@@ -1,0 +1,242 @@
+;; -*- Prcs -*-
+;;
+;; Cerebellar cortex tutorial
+;;
+;; $ProjectVersion$
+;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;'
+;;' Cerebellar cortex tutorial
+;;'
+;;' (C) 1998,1999 BBF-UIA
+;;'
+;;' see our site at http://www.bbf.uia.ac.be/ for more information regarding
+;;' the cerebellar cortex and genesis simulation software.
+;;'
+;;'
+;;' functional ideas ..	Reinoud Maex, reinoud@bbf.uia.ac.be
+;;'			Erik De Schutter, erik@bbf.uia.ac.be
+;;' genesis coding ....	Hugo Cornelis, hugo@bbf.uia.ac.be
+;;'
+;;' general feedback ..	Reinoud Maex, Erik De Schutter
+;;'
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(Created-By-Prcs-Version 1 3 3)
+(Project-Description "")
+(Project-Version network 0 75)
+(Parent-Version network 0 74)
+(Version-Log "
+	1. Bugfixes in TEST.g files.
+	2. Added some support for -statistics, 
+		still -verbose in radial setup.
+")
+(New-Version-Log
+"")
+(Checkin-Time "Tue, 09 Oct 2001 14:59:26 +0200")
+(Checkin-Login hugo)
+(Populate-Ignore ())
+(Project-Keywords)
+(Files
+;; This is a comment.  Fill in files here.
+;; For example:  (prcs/checkout.cc ())
+
+;; Files added by populate at Mon, 01 Feb 1999 13:44:44 +0000,
+;; to version 0.0(w), by hugo:
+
+  
+
+;; Files added by populate at Wed, 03 Feb 1999 21:20:36 +0000,
+;; to version 0.0(w), by hugo:
+
+  (Granule_cell/TEST.g (network/1_TEST.g 1.2 640))
+  (Granule_cell/Gran_synchan.g (network/2_Gran_synch 1.2 640))
+  (Granule_cell/Gran_const.g (network/3_Gran_const 1.2 640))
+  (Granule_cell/Gran_comp.g (network/4_Gran_comp. 1.2 640))
+  (Granule_cell/Gran_chan_tab.g (network/5_Gran_chan_ 1.2 640))
+  (Granule_cell/Gran_chan_KCa_tab.g (network/6_Gran_chan_ 1.2 640))
+  (Granule_cell/Gran_chan_KCa.g (network/7_Gran_chan_ 1.1 640))
+  (Granule_cell/Gran_chan_KA.g (network/8_Gran_chan_ 1.1 640))
+  (Granule_cell/Gran_chan.g (network/9_Gran_chan. 1.1 640))
+  (Gran_layer_2D/pweights.g (network/10_pweights.g 1.1 644))
+  (Gran_layer_2D/pdelays.g (network/11_pdelays.g 1.2 644))
+  (Gran_layer_2D/nsynapses.g (network/12_nsynapses. 1.2 644))
+  (Gran_layer_2D/mf_firing_rate.g (network/13_mf_firing_ 1.1 644))
+  (Gran_layer_2D/initialization_values.g (network/14_initializa 1.1 644))
+  (Gran_layer_2D/Stellate_cell.g (network/15_Stellate_c 1.2 644))
+  (Gran_layer_2D/Mossy_fiber.g (network/16_Mossy_fibe 1.7 644))
+  (Gran_layer_2D/Granule_cell.g (network/17_Granule_ce 1.10 644))
+  (Gran_layer_2D/Gran_layer_view_hines.g (network/18_Gran_layer 1.16.1.2 644))
+  (Gran_layer_2D/Gran_layer_spike_history_hines.g (network/19_Gran_layer 1.1 644))
+  (Gran_layer_2D/Gran_layer_setup_radialPF.g (network/20_Gran_layer 1.4 644))
+  (Gran_layer_2D/Gran_layer_setup.g (network/21_Gran_layer 1.25 644))
+  (Gran_layer_2D/Gran_layer_randomize_hines.g (network/22_Gran_layer 1.3 644))
+  (Gran_layer_2D/Gran_layer_hines.g (network/23_Gran_layer 1.3 644))
+  (Gran_layer_2D/Gran_layer_graph_hines.g (network/24_Gran_layer 1.14.1.2 644))
+
+  (Gran_layer_2D/Golgi_cell.g (network/26_Golgi_cell 1.10 644))
+  (Golgi_cell/TEST.g (network/27_TEST.g 1.2 640))
+  (Golgi_cell/Golg_synchan.g (network/28_Golg_synch 1.2 640))
+  (Golgi_cell/Golg_const.g (network/29_Golg_const 1.2 640))
+  (Golgi_cell/Golg_comp.g (network/30_Golg_comp. 1.2 640))
+  (Golgi_cell/Golg_chan_tab.g (network/31_Golg_chan_ 1.2 640))
+  (Golgi_cell/Golg_chan_KCa_tab.g (network/32_Golg_chan_ 1.2 640))
+  (Golgi_cell/Golg_chan_KCa.g (network/33_Golg_chan_ 1.1 640))
+  (Golgi_cell/Golg_chan_KA.g (network/34_Golg_chan_ 1.1 640))
+  (Golgi_cell/Golg_chan.g (network/35_Golg_chan. 1.1 640))
+  (makeconfig.g (network/36_makeconfig 1.6 644))
+  (TUTORIAL.g (network/37_TUTORIAL.g 1.18.1.6.1.3 644))
+
+;; Files added by populate at Wed, 03 Feb 1999 22:05:20 +0000,
+;; to version 0.2(w), by hugo:
+
+  (Granule_cell/Gran1M0.p (network/38_Gran1M0.p 1.1 640))
+  (Golgi_cell/Golg1M0.p (network/39_Golg1M0.p 1.1 640))
+
+;; Files added by populate at Thu, 04 Feb 1999 17:28:59 +0000,
+;; to version 0.3(w), by hugo:
+
+  (rainbow3 (network/40_rainbow3 1.1 644))
+
+;; Files added by populate at Fri, 05 Feb 1999 17:40:21 +0000,
+;; to version 0.4(w), by hugo:
+
+  (Interface/control.g (network/41_control.g 1.13.1.5 644))
+
+;; Files added by populate at Fri, 19 Feb 1999 09:03:45 +0000,
+;; to version 0.11(w), by hugo:
+
+  
+
+;; Files added by populate at Thu, 04 Mar 1999 10:46:47 +0000,
+;; to version 0.11(w), by hugo:
+
+  (ArchMake (network/43_ArchMake 1.8 755))
+
+;; Files added by populate at Thu, 04 Mar 1999 10:48:46 +0000,
+;; to version 0.12(w), by hugo:
+
+  
+
+;; Files added by populate at Fri, 05 Mar 1999 22:46:45 +0000,
+;; to version 0.13(w), by hugo:
+
+  (Interface/info.g (network/45_info.g 1.2.1.2 644))
+
+;; Files added by populate at Fri, 05 Mar 1999 22:56:01 +0000,
+;; to version 0.14(w), by hugo:
+
+  (TODO (network/46_TODO 1.1 644))
+
+;; Files deleted by depopulate at Sat, 06 Mar 1999 11:01:13 +0000,
+;; from version 0.15(w), by hugo:
+
+  ; (actions.g ())
+
+;; Files added by populate at Sat, 06 Mar 1999 11:01:23 +0000,
+;; to version 0.15(w), by hugo:
+
+  (Interface/input.g (network/47_input.g 1.14.1.2 644))
+
+;; Files added by populate at Sat, 06 Mar 1999 11:10:53 +0000,
+;; to version 0.15(w), by hugo:
+
+  (InputLib/inputlibx.g (network/48_xinput.g 1.5.1.2 644))
+
+;; Files added by populate at Mon, 08 Mar 1999 13:05:33 +0000,
+;; to version 0.15(w), by hugo:
+
+  (Gran_layer_2D/solver.g (network/49_solver.g 1.8 644))
+
+;; Moved from Gran_layer_2D/ to enhance modularity
+
+  (Gran_layer_2D/Gran_layer_const.g (network/25_Gran_layer 1.9 644))
+
+;; Files added by populate at Mon, 08 Mar 1999 16:18:08 +0000,
+;; to version 0.16(w), by hugo:
+
+  (InputLib/inputlib.g (network/50_inputlib.g 1.6.1.3 644))
+
+;; Files added by populate at Mon, 08 Mar 1999 21:40:49 +0000,
+;; to version 0.17(w), by hugo:
+
+  (InputLib/inputlibf.g (network/51_inputlibf. 1.5 644))
+
+;; Files added by populate at Tue, 16 Mar 1999 16:22:08 +0000,
+;; to version 0.25(w), by hugo:
+
+  (Interface/settings.g (network/b/0_settings.g 1.15 644))
+
+;; Files added by populate at Tue, 23 Mar 1999 13:43:41 +0000,
+;; to version 0.30(w), by hugo:
+
+  (Gran_layer_2D/dbgSynapses.g (network/b/1_dbgSynapse 1.5 644))
+
+;; Files added by populate at Wed, 24 Mar 1999 14:59:03 +0000,
+;; to version 0.31(w), by hugo:
+
+  (TUTORIAL (network/b/2_TUTORIAL 1.6.1.4 755))
+
+;; Files added by populate at Wed, 24 Mar 1999 17:34:21 +0000,
+;; to version 0.31(w), by hugo:
+
+  (Gran_layer_2D/config.g (network/b/3_config.g 1.19 644))
+
+;; Files added by populate at Thu, 25 Mar 1999 11:33:24 +0000,
+;; to version 0.32(w), by hugo:
+
+  (simulation.config (network/b/4_simulation 1.14.1.8 664))
+
+;; Files added by populate at Thu, 25 Mar 1999 13:53:22 +0000,
+;; to version 0.34(w), by hugo:
+
+  (simulation.defaults (network/b/5_simulation 1.8.1.1 644))
+
+;; Files added by populate at Mon, 12 Apr 1999 13:46:34 +0000,
+;; to version 0.49(w), by hugo:
+
+  (debug.g (network/b/6_debug.g 1.7 644))
+
+;; Files added by populate at Tue, 26 Oct 1999 15:55:50 +0000,
+;; to version 0.58(w), by hugo:
+
+  (simulation.config.g20-3g120-8m80-4 (network/b/8_simulation 1.2 644))
+  (simulation.config.g1-1g2-2m2-2 (network/b/9_simulation 1.2 644))
+  (simulation.config.g10-1g30-4m10-3 (network/b/10_simulation 1.2 644))
+  (simulation.config.g4-2g12-5m6-3 (network/b/11_simulation 1.2 644))
+
+;; Files added by populate at Wed, 08 Dec 1999 15:40:23 +0000,
+;; to version 0.65(w), by hugo:
+
+  (simulation.config.g30-3g120-9m40-4 (network/b/12_simulation 1.1 644))
+  (Gran_layer_2D/Gran_layer_view_setup.g (network/b/13_Gran_layer 1.6 644))
+
+;; Files deleted by depopulate at Mon, 20 Dec 1999 22:15:30 +0000,
+;; from version 0.65(w), by hugo:
+
+  ; (TAGS ())
+
+;; Files deleted by depopulate at Fri, 07 Jan 2000 14:37:52 +0000,
+;; from version 0.66(w), by hugo:
+
+  ; (tags ())
+
+;; Files added by populate at Mon, 10 Apr 2000 13:23:20 +0000,
+;; to version 0.70(w), by hugo:
+
+  (Gran_layer_2D/movie.g (network/b/14_movie.g 1.2 644))
+
+;; Files added by populate at Thu, 08 Feb 2001 11:20:42 +0100,
+;; to version 0.72(w), by hugo:
+
+  (Interface/credits.txt (network/b/15_credits.tx 1.1 644))
+  (Interface/help.txt (network/b/16_help.txt 1.1 644))
+
+;; Files added by populate at Thu, 08 Feb 2001 11:49:23 +0100,
+;; to version 0.72(w), by hugo:
+
+  (Interface/output.g (network/b/17_output.g 1.2 644))
+)
+(Merge-Parents)
+(New-Merge-Parents)

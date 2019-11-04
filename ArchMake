@@ -1,0 +1,4 @@
+#$Format: "ARCHIVE=$Project$.$ProjectVersion$"$
+ARCHIVE=network.0.75
+tar cvf $ARCHIVE.tar Network_tutorial/TUTORIAL Network_tutorial/ArchMake Network_tutorial/debug.g Network_tutorial/simulation.* `find Network_tutorial/ -name "*.p"` `find Network_tutorial/ -name "*.g"` `find Network_tutorial/ -name "*README*"` Network_tutorial/rainbow3 Network_tutorial/TAGS Network_tutorial/tags
+gzip -9 $ARCHIVE.tar

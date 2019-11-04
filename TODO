@@ -1,0 +1,11 @@
+$Id: TODO 1.1 Fri, 05 Mar 1999 16:56:41 -0600 hugo $
+#TODO : things still todo
+1. select van hor. of vert. rij Golgi's
+2. correlogram, histogram, ISI
+3. view mossy fibers with mean output rate instead of actual output
+4. mossy fibers in 3X3 grid to change mean firing rate
+5. 3X3 grid for mossy fibers with pulsatile changing firing rate
+6. output simulation time uses output clock 10
+7. granule cells selected in horizontal or vertical manner
+8. manually selectable granule/Golgi cells
+

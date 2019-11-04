@@ -1,0 +1,10 @@
+
+Network tutorial : credits
+--------------------------
+
+Network model....... Reinoud Maex and Erik De Schutter
+functional ideas ... Reinoud Maex, reinoud@bbf.uia.ac.be
+genesis coding ..... Hugo Cornelis, hugo@bbf.uia.ac.be
+documentation ...... Hugo Cornelis, Reinoud Maex
+
+general feedback ... Reinoud Maex, Erik De Schutter
